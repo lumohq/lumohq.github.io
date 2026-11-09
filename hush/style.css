@@ -1,0 +1,25 @@
+:root {
+  --bg: #f6f4ff; --surface: #fff; --ink: #1c1838; --muted: #5d5a74;
+  --line: #e4deff; --accent: #6c4df6;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #120f24; --surface: #1e1a38; --ink: #f3f0ff; --muted: #b9b4d6; --line: #332d5c; --accent: #8b73ff; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 17px/1.6 ui-rounded, "SF Pro Rounded", -apple-system, system-ui, sans-serif;
+  padding: 40px max(20px, env(safe-area-inset-left));
+}
+main { max-width: 680px; margin: 0 auto; }
+header { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; }
+header img { width: 64px; height: 64px; border-radius: 15px; }
+header a { color: inherit; text-decoration: none; font-weight: 800; font-size: 1.5rem; }
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
+h2 { font-size: 1.2rem; margin: 32px 0 8px; }
+p, li { color: var(--ink); }
+.muted { color: var(--muted); }
+a { color: var(--accent); }
+.card { background: var(--surface); border: 2px solid var(--line); border-radius: 20px; padding: 24px; margin: 16px 0; }
+nav { margin-top: 48px; padding-top: 16px; border-top: 2px solid var(--line); font-size: 0.9rem; display: flex; gap: 20px; flex-wrap: wrap; }
